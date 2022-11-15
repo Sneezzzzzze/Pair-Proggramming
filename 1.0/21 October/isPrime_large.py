@@ -4,10 +4,10 @@ def main():
     """beom"""
     inp = int(input())
     if inp == 1:
-        print("No")
+        print("NO")
     else:
         if sqrt(inp) == True:
-            print("No")
+            print("NO")
         else:
-            print("Yes")
+            print("YES")
 main()
