@@ -9,7 +9,6 @@ def main():
     if (amount != rabbit + bird)  or \
     (rabbit < 0) or (bird < 0) or \
     (rabbit == float) or (bird == float):
-        print("Impossible")
     else:
         print(rabbit, bird)
 main()
