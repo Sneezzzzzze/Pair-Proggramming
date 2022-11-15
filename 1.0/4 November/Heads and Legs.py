@@ -6,7 +6,9 @@ def main():
     rabbit = int((leg-(amount*2))/2)
     bird = amount - rabbit
     ans = rabbit, bird
-    if amount != rabbit + bird or rabbit == float or rabbit < 0 or bird < 0:
+    if (amount != rabbit + bird)  or \
+    (rabbit < 0) or (bird < 0) or \
+    (rabbit == float) or (bird == float):
         print("Impossible")
     else:
         print(rabbit, bird)
