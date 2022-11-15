@@ -1,15 +1,10 @@
 """BloodDonation"""
-def main():
+def main(age, weight, have_you_ever):
     """beom"""
-    age = int(input())
-    weight = int(input())
-    have_you_ever = int(input())
-    if age == 17 or age == 60 <= 70:
+    if age == 17 or (70 >= age >= 60):
         commit = input()
-        if commit == "True":
-            print("Yes")
-    if age < 17 or weight < 45 or (have_you_ever == 0 and age <= 55):
+    if ((age == 17 or (70 >= age >= 60)) and commit == "False")\
+            or age < 17 or age > 70 or weight < 45 or (have_you_ever == 0 and age > 55):
         print("No")
-    else:
-        print("Yes")
-main()
+    else: print("Yes")
+main(int(input()), int(input()), int(input()))
