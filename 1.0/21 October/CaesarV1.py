@@ -1,17 +1,12 @@
-msg = 'Wkh txlfn eurzq ira mxpsv ryhu wkh odcb grj.'
-#encrypted msg  
-LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'  
-  
-for k in range(len(LETTERS)):  
-   transformation = ''  
-   for s in msg:  
-      if s in LETTERS:  
-         n = LETTERS.find(s)  
-         n = n - k  
-         if n < 0:  
-            n = n + len(LETTERS)  
-         transformation = transformation + LETTERS[n]  
-  
-      else:  
-         transformation = transformation + s  
-print('Hacking k #%s: %s' % (k, transformation))   
+def decrypt_char(char, key):
+    return chr(ord('A') + (ord(char) - ord('A') + 26 - key) % 26)
+def decrypt_message(key, ciper):
+    cipher = cipher.upper()
+    message = ''
+    for char in cipher:
+        if char not in ' ,.':
+            message += decrypt_char(char, key)
+        else:
+            message += char
+    return message
+decrypt_message(str(int(input)), input())
