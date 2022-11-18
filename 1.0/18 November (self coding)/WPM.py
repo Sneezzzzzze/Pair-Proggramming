@@ -17,5 +17,4 @@ def main():
                         }
              }
     print(dicct[inp][True])
-
 main()
