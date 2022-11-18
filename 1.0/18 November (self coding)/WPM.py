@@ -1,6 +1,4 @@
 """WPM"""
-
-
 def main():
     """BEOM"""
     inp = input()
@@ -19,6 +17,5 @@ def main():
                         }
              }
     print(dicct[inp][True])
-
 
 main()
