@@ -3,13 +3,10 @@ def main():
     """beom"""
     amount = int(input())
     leg = int(input())
-    rabbit = int((leg-(amount*2))/2)
+    rabbit, lost = divmod(leg-(amount*2), 2)
     bird = amount - rabbit
-    ans = rabbit, bird
-    if (amount != rabbit + bird)  or \
-    (rabbit < 0) or (bird < 0) or \
-    (rabbit == float) or (bird == float):
-        print("Impossible")
-    else:
+    if rabbit >= 0 and bird >= 0 and lost == 0:
         print(rabbit, bird)
+    else:
+        print("Impossible")
 main()
