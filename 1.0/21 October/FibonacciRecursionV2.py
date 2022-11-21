@@ -1,7 +1,10 @@
 """FibonacciRecursionV2"""
-def recur_fibo(nnn):
+def fibo(n):
     """beom nat"""
-    if nnn <= 1:
-        return nnn
-    return recur_fibo(nnn-1) + recur_fibo(nnn-2)
-print(recur_fibo(int(input())))
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibo(n-1) + fibo(n-2)
+print(fibo(int(input())))
