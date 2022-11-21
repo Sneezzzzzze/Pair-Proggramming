@@ -1,13 +1,19 @@
 """Colors"""
 def main():
     """beom"""
-    color1 = input()
-    color2 = input()
-    color = ["Red", "Yellow", "Blue"]
-    if color1 or color2 not in color:
+    color1 = input().capitalize()
+    color2 = input().capitalize()
+    col = ["Red", "Blue", "Yellow"]
+    if color1 not in col or color2 not in col:
         print("Error")
-    else:
-        if color1 == color[0] and color2 == color[1] or \
-            color1 == color[1] and color2 == color[0]:
-            print("Orange")
+        return
+    if color1 == color2:
+        print(color1)
+        return
+    if color1 == "Red" and color2 == "Yellow" or color2 == "Red" and color1 == "Yellow":
+        print("Orange")
+    elif color1 == "Red" and color2 == "Blue" or color2 == "Red" and color1 == "Blue":
+        print("Violet")
+    elif color1 == "Yellow" and color2 == "Blue" or color2 == "Yellow" and color1 == "Blue":
+        print("Green")
 main()
